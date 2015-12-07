@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Contacto</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/valida.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Contacto</h3>
+					</div>
+					<div class="panel-body">
+						<form action="datos/procesa.php" method="POST" onsubmit="return validaForm()">
+							<div class="form-group">
+								<label for="nombre">Nombre:</label>
+								<input id="nom" name="nom" type="text" class="form-control" placeholder="Teclea tu nombre">
+								<p id="errornom"></p>
+							</div>
+							<div class="form-group">
+								<label for="telefono">Telefono:</label>
+								<input id="tel" name="tel" type="text" class="form-control" placeholder="Teclea tu telefono">
+								<p id="errortel"></p>
+							</div>
+							<div class="form-group">
+								<label for="ciudad">Lugar de visita:</label>
+								<select id="ciudad" name="ciudad" class="form-control">
+									<option value="">Ninguno</option>
+									<option value="1">Sinaloa</option>
+									<option value="2">Sonora</option>
+									<option value="3">Nayarit</option>
+									<option value="4">df</option>
+								</select>
+								<p id="errorciudad"></p>
+							</div>
+							<div class="form-group">
+								<label for="obvs">Dejanos tus comentarios:</label>
+								<textarea id="comentarios" class="form-control" name="comentarios" cols="30" rows="10" placeholder="Comentarios"></textarea>
+								<p id="errorcomentarios"></p>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary">Contactar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
